@@ -17,6 +17,14 @@ class TimeListViewController: UIViewController {
     
     func setUpNavigationBar() {
         self.navigationItem.title = "Time List"
+        let button = UIBarButtonItem(
+            barButtonSystemItem: UIBarButtonSystemItem.add,
+            target: self,
+            action: #selector(addTimeSheet))
+        self.navigationItem.rightBarButtonItem = button
     }
-
+    
+    @objc func addTimeSheet() {
+        
+    }
 }
