@@ -59,9 +59,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TimeListWarmBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Jhh-WY-L3L" userLabel="TImeListBackground">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RJD-zL-4dp">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,7 +73,15 @@
                             <constraint firstItem="Ei4-gI-s2f" firstAttribute="trailing" secondItem="RJD-zL-4dp" secondAttribute="trailing" id="7oM-Hn-H2g"/>
                             <constraint firstItem="RJD-zL-4dp" firstAttribute="leading" secondItem="zQH-Xv-ESa" secondAttribute="leading" id="97n-5o-HB7"/>
                             <constraint firstItem="Ei4-gI-s2f" firstAttribute="bottom" secondItem="RJD-zL-4dp" secondAttribute="bottom" id="Gmv-h8-5ok"/>
+                            <constraint firstItem="Jhh-WY-L3L" firstAttribute="top" secondItem="Ei4-gI-s2f" secondAttribute="top" id="MTj-h9-XYc"/>
                             <constraint firstItem="RJD-zL-4dp" firstAttribute="top" secondItem="Ei4-gI-s2f" secondAttribute="top" id="OvQ-rk-hAA"/>
+                            <constraint firstItem="Ei4-gI-s2f" firstAttribute="bottom" secondItem="Jhh-WY-L3L" secondAttribute="bottom" id="a9B-LY-xAE"/>
+                            <constraint firstItem="Jhh-WY-L3L" firstAttribute="trailing" secondItem="Ei4-gI-s2f" secondAttribute="trailing" id="hzz-mU-hzF"/>
+                            <constraint firstItem="Jhh-WY-L3L" firstAttribute="top" secondItem="Ei4-gI-s2f" secondAttribute="top" id="k16-Wo-pJu"/>
+                            <constraint firstItem="Jhh-WY-L3L" firstAttribute="leading" secondItem="Ei4-gI-s2f" secondAttribute="leading" id="qUt-07-A2Z"/>
+                            <constraint firstItem="Jhh-WY-L3L" firstAttribute="bottom" secondItem="zQH-Xv-ESa" secondAttribute="bottom" id="sqQ-JT-nqW"/>
+                            <constraint firstItem="Jhh-WY-L3L" firstAttribute="leading" secondItem="Ei4-gI-s2f" secondAttribute="leading" id="yaN-uc-Dgb"/>
+                            <constraint firstItem="Ei4-gI-s2f" firstAttribute="trailing" secondItem="Jhh-WY-L3L" secondAttribute="trailing" id="zcL-Zk-wL2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ei4-gI-s2f"/>
                     </view>
@@ -99,6 +111,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="TimeListWarmBackground" width="4500" height="3000"/>
         <image name="loginScreenBackgroundImage" width="1968" height="2952"/>
     </resources>
 </document>

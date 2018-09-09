@@ -16,6 +16,8 @@
 		DCC121B5214448C6003D59AB /* followYourHeartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC121B4214448C6003D59AB /* followYourHeartUITests.swift */; };
 		DCC121C321458A25003D59AB /* TimeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC121C221458A25003D59AB /* TimeListViewController.swift */; };
 		DCC121C621459792003D59AB /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC121C521459792003D59AB /* UIColor+HexString.swift */; };
+		DCC121CD2145A08F003D59AB /* TimeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC121CB2145A08F003D59AB /* TimeListCell.swift */; };
+		DCC121CE2145A08F003D59AB /* TimeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC121CC2145A08F003D59AB /* TimeListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		DCC121B6214448C6003D59AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCC121C221458A25003D59AB /* TimeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeListViewController.swift; sourceTree = "<group>"; };
 		DCC121C521459792003D59AB /* UIColor+HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
+		DCC121CB2145A08F003D59AB /* TimeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeListCell.swift; sourceTree = "<group>"; };
+		DCC121CC2145A08F003D59AB /* TimeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				DCC121C9214597E6003D59AB /* StoryBoards */,
-				DCC121C8214597BA003D59AB /* DefaultAppSettings */,
+				DCC121CA2145A01F003D59AB /* VIews */,
 				DCC121C72145979D003D59AB /* Controllers */,
 				DCC121C42145974C003D59AB /* Extensions */,
+				DCC121C8214597BA003D59AB /* DefaultAppSettings */,
 				DCC1219B214448C6003D59AB /* Assets.xcassets */,
 				DCC121A0214448C6003D59AB /* Info.plist */,
 			);
@@ -161,6 +166,15 @@
 				DCC1219D214448C6003D59AB /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		DCC121CA2145A01F003D59AB /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				DCC121CB2145A08F003D59AB /* TimeListCell.swift */,
+				DCC121CC2145A08F003D59AB /* TimeListCell.xib */,
+			);
+			path = VIews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC121CE2145A08F003D59AB /* TimeListCell.xib in Resources */,
 				DCC1219F214448C6003D59AB /* LaunchScreen.storyboard in Resources */,
 				DCC1219C214448C6003D59AB /* Assets.xcassets in Resources */,
 				DCC1219A214448C6003D59AB /* Main.storyboard in Resources */,
@@ -299,6 +314,7 @@
 			files = (
 				DCC121C321458A25003D59AB /* TimeListViewController.swift in Sources */,
 				DCC12197214448C6003D59AB /* ViewController.swift in Sources */,
+				DCC121CD2145A08F003D59AB /* TimeListCell.swift in Sources */,
 				DCC121C621459792003D59AB /* UIColor+HexString.swift in Sources */,
 				DCC12195214448C6003D59AB /* AppDelegate.swift in Sources */,
 			);

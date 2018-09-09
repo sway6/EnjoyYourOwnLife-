@@ -17,7 +17,6 @@ class TimeListViewController: UIViewController {
     
     func setUpNavigationBar() {
         self.navigationItem.title = "Time List"
-//        self.navigationItem.rightBarButtonItem
     }
 
 }
