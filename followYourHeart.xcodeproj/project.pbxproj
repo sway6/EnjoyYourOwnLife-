@@ -14,6 +14,8 @@
 		DCC1219F214448C6003D59AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC1219D214448C6003D59AB /* LaunchScreen.storyboard */; };
 		DCC121AA214448C6003D59AB /* followYourHeartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC121A9214448C6003D59AB /* followYourHeartTests.swift */; };
 		DCC121B5214448C6003D59AB /* followYourHeartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC121B4214448C6003D59AB /* followYourHeartUITests.swift */; };
+		DCC121C321458A25003D59AB /* TimeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC121C221458A25003D59AB /* TimeListViewController.swift */; };
+		DCC121C621459792003D59AB /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC121C521459792003D59AB /* UIColor+HexString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		DCC121B0214448C6003D59AB /* followYourHeartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = followYourHeartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC121B4214448C6003D59AB /* followYourHeartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = followYourHeartUITests.swift; sourceTree = "<group>"; };
 		DCC121B6214448C6003D59AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC121C221458A25003D59AB /* TimeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeListViewController.swift; sourceTree = "<group>"; };
+		DCC121C521459792003D59AB /* UIColor+HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +101,11 @@
 		DCC12193214448C6003D59AB /* followYourHeart */ = {
 			isa = PBXGroup;
 			children = (
-				DCC12194214448C6003D59AB /* AppDelegate.swift */,
-				DCC12196214448C6003D59AB /* ViewController.swift */,
-				DCC12198214448C6003D59AB /* Main.storyboard */,
+				DCC121C9214597E6003D59AB /* StoryBoards */,
+				DCC121C8214597BA003D59AB /* DefaultAppSettings */,
+				DCC121C72145979D003D59AB /* Controllers */,
+				DCC121C42145974C003D59AB /* Extensions */,
 				DCC1219B214448C6003D59AB /* Assets.xcassets */,
-				DCC1219D214448C6003D59AB /* LaunchScreen.storyboard */,
 				DCC121A0214448C6003D59AB /* Info.plist */,
 			);
 			path = followYourHeart;
@@ -123,6 +127,40 @@
 				DCC121B6214448C6003D59AB /* Info.plist */,
 			);
 			path = followYourHeartUITests;
+			sourceTree = "<group>";
+		};
+		DCC121C42145974C003D59AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DCC121C521459792003D59AB /* UIColor+HexString.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DCC121C72145979D003D59AB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCC12196214448C6003D59AB /* ViewController.swift */,
+				DCC121C221458A25003D59AB /* TimeListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DCC121C8214597BA003D59AB /* DefaultAppSettings */ = {
+			isa = PBXGroup;
+			children = (
+				DCC12194214448C6003D59AB /* AppDelegate.swift */,
+			);
+			path = DefaultAppSettings;
+			sourceTree = "<group>";
+		};
+		DCC121C9214597E6003D59AB /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				DCC12198214448C6003D59AB /* Main.storyboard */,
+				DCC1219D214448C6003D59AB /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC121C321458A25003D59AB /* TimeListViewController.swift in Sources */,
 				DCC12197214448C6003D59AB /* ViewController.swift in Sources */,
+				DCC121C621459792003D59AB /* UIColor+HexString.swift in Sources */,
 				DCC12195214448C6003D59AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73362K33H6;
 				INFOPLIST_FILE = followYourHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bryanBy.followYourHeart.followYourHeart;
@@ -441,6 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73362K33H6;
 				INFOPLIST_FILE = followYourHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bryanBy.followYourHeart.followYourHeart;
