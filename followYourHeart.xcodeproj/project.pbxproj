@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC1F5AD8214B653B005B9B32 /* FightingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F5AD7214B653B005B9B32 /* FightingTime.swift */; };
 		DCC12195214448C6003D59AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC12194214448C6003D59AB /* AppDelegate.swift */; };
 		DCC12197214448C6003D59AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC12196214448C6003D59AB /* ViewController.swift */; };
 		DCC1219A214448C6003D59AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC12198214448C6003D59AB /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC1F5AD7214B653B005B9B32 /* FightingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingTime.swift; sourceTree = "<group>"; };
 		DCC12191214448C6003D59AB /* followYourHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = followYourHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC12194214448C6003D59AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCC12196214448C6003D59AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC1F5AD6214B642C005B9B32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC1F5AD7214B653B005B9B32 /* FightingTime.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DCC12188214448C6003D59AB = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				DCC121C9214597E6003D59AB /* StoryBoards */,
+				DC1F5AD6214B642C005B9B32 /* Models */,
 				DCC121CA2145A01F003D59AB /* VIews */,
 				DCC121C72145979D003D59AB /* Controllers */,
 				DCC121C42145974C003D59AB /* Extensions */,
@@ -320,6 +331,7 @@
 				DCC121CD2145A08F003D59AB /* TimeListCell.swift in Sources */,
 				DCC121C621459792003D59AB /* UIColor+HexString.swift in Sources */,
 				DCC12195214448C6003D59AB /* AppDelegate.swift in Sources */,
+				DC1F5AD8214B653B005B9B32 /* FightingTime.swift in Sources */,
 				DCC121D72145D3F0003D59AB /* DiscriptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

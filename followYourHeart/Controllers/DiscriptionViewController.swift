@@ -11,6 +11,7 @@ import UIKit
 class DiscriptionViewController: UIViewController {
 
     @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var timeIntervalTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
