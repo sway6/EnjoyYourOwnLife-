@@ -12,10 +12,15 @@ struct FightingTime {
     // time to:
     //    1. show on messageList
     //    2. push a local notification as a start time
-    let startDate: Calendar
+    let startTime: FightingTimePoint
     
     // time to push a local notification as a end time
     let timeInterval: FightingTimeInterval
+}
+
+struct FightingTimePoint {
+    let hour: Int
+    let min: Int
 }
 
 struct FightingTimeInterval {
