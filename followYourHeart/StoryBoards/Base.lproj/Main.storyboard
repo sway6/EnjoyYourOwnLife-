@@ -130,58 +130,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start from:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQs-Rz-h6K">
-                                <rect key="frame" x="20" y="235" width="335" height="21"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95763843910000002" green="0.62437644029999995" blue="0.52568176789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCC-97-xH0">
-                                <rect key="frame" x="20" y="334" width="335" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Interval:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMJ-fP-fgz">
-                                <rect key="frame" x="20" y="305" width="335" height="21"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.95763843910000002" green="0.62437644029999995" blue="0.52568176789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xqw-Fu-akV">
-                                <rect key="frame" x="20" y="264" width="335" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-SM-Ie2">
+                                <rect key="frame" x="154.5" y="318.5" width="66" height="30"/>
+                                <state key="normal" title="SET TIME"/>
+                                <connections>
+                                    <action selector="showTimeSetting:" destination="APQ-tu-wXs" eventType="touchUpInside" id="YJW-OY-bfM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jCC-97-xH0" firstAttribute="top" secondItem="vMJ-fP-fgz" secondAttribute="bottom" constant="8" id="CKU-qQ-e52"/>
                             <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="FJB-lW-bd3" secondAttribute="trailing" constant="20" id="CQQ-so-EDx"/>
                             <constraint firstItem="6Wi-s8-f6Y" firstAttribute="top" secondItem="xwb-FY-arb" secondAttribute="top" id="CSU-6N-je3"/>
                             <constraint firstItem="T1j-wH-L4s" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="D3T-e3-8ST"/>
-                            <constraint firstItem="vMJ-fP-fgz" firstAttribute="top" secondItem="xqw-Fu-akV" secondAttribute="bottom" constant="11" id="ErP-KO-d7c"/>
-                            <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="jCC-97-xH0" secondAttribute="trailing" constant="20" id="F05-Jk-js0"/>
                             <constraint firstItem="6Wi-s8-f6Y" firstAttribute="trailing" secondItem="XY4-Cm-eqt" secondAttribute="trailing" id="JGd-Qq-CkS"/>
                             <constraint firstItem="6Wi-s8-f6Y" firstAttribute="bottom" secondItem="xwb-FY-arb" secondAttribute="top" id="JxC-u8-HGD"/>
-                            <constraint firstItem="ZQs-Rz-h6K" firstAttribute="top" secondItem="T1j-wH-L4s" secondAttribute="bottom" constant="20" id="K8g-ZI-Wf6"/>
-                            <constraint firstItem="xqw-Fu-akV" firstAttribute="top" secondItem="ZQs-Rz-h6K" secondAttribute="bottom" constant="8" id="ObM-JR-u4Q"/>
-                            <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="ZQs-Rz-h6K" secondAttribute="trailing" constant="20" id="SYR-2k-qZb"/>
                             <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="T1j-wH-L4s" secondAttribute="trailing" constant="20" id="TdG-bE-BEM"/>
-                            <constraint firstItem="ZQs-Rz-h6K" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="c59-r7-40R"/>
+                            <constraint firstItem="PEd-SM-Ie2" firstAttribute="centerX" secondItem="xwb-FY-arb" secondAttribute="centerX" id="YjA-B6-c9l"/>
                             <constraint firstItem="FJB-lW-bd3" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="con-6s-MtU"/>
-                            <constraint firstItem="jCC-97-xH0" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="d3V-rx-ODk"/>
                             <constraint firstItem="6Wi-s8-f6Y" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" id="fsz-O0-NhY"/>
                             <constraint firstItem="FJB-lW-bd3" firstAttribute="top" secondItem="XY4-Cm-eqt" secondAttribute="top" constant="23" id="hIp-jy-E3P"/>
-                            <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="xqw-Fu-akV" secondAttribute="trailing" constant="20" id="idB-ZV-bFC"/>
-                            <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="vMJ-fP-fgz" secondAttribute="trailing" constant="20" id="jvn-Dt-fWi"/>
-                            <constraint firstItem="vMJ-fP-fgz" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="ocn-69-rju"/>
                             <constraint firstItem="T1j-wH-L4s" firstAttribute="top" secondItem="FJB-lW-bd3" secondAttribute="bottom" constant="8" id="uXD-zH-8jP"/>
-                            <constraint firstItem="xqw-Fu-akV" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="yTA-Ib-HRI"/>
+                            <constraint firstItem="PEd-SM-Ie2" firstAttribute="centerY" secondItem="xwb-FY-arb" secondAttribute="centerY" id="wDn-RT-tNu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XY4-Cm-eqt"/>
                     </view>
@@ -190,7 +160,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextField" destination="T1j-wH-L4s" id="2sl-vI-WOu"/>
-                        <outlet property="timeIntervalTextField" destination="jCC-97-xH0" id="Sth-ow-0oQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mZ-8m-VpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

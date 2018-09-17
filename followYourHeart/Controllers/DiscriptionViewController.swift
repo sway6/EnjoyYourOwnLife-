@@ -11,7 +11,9 @@ import UIKit
 class DiscriptionViewController: UIViewController {
 
     @IBOutlet weak var descriptionTextField: UITextField!
-    @IBOutlet weak var timeIntervalTextField: UITextField!
+    @IBAction func showTimeSetting(_ sender: Any) {
+        showTimeSettingView()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,13 @@ class DiscriptionViewController: UIViewController {
     func setUpDescriptionTextField() {
         descriptionTextField.placeholder = "discription for this time sheet:"
         descriptionTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.top
+    }
+    
+    func showTimeSettingView() {
+        let timeSettingPopOVerController = TimeInputController()
+        timeSettingPopOVerController.modalPresentationStyle = .overCurrentContext
+        timeSettingPopOVerController.modalTransitionStyle = .crossDissolve
+        self.present(timeSettingPopOVerController, animated: true, completion: nil)
     }
 }
 
