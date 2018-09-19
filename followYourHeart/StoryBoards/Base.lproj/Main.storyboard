@@ -130,28 +130,53 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-SM-Ie2">
-                                <rect key="frame" x="154.5" y="318.5" width="66" height="30"/>
-                                <state key="normal" title="SET TIME"/>
-                                <connections>
-                                    <action selector="showTimeSetting:" destination="APQ-tu-wXs" eventType="touchUpInside" id="YJW-OY-bfM"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start From:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTn-EJ-2As">
+                                <rect key="frame" x="20" y="233" width="86" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.62352941179999999" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFB-fp-hyN">
+                                <rect key="frame" x="20" y="261" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWs-KI-whS">
+                                <rect key="frame" x="20" y="309" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.62352941179999999" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tLf-f4-F0p">
+                                <rect key="frame" x="20" y="338" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NFB-fp-hyN" firstAttribute="top" secondItem="HTn-EJ-2As" secondAttribute="bottom" constant="8" id="AQk-SU-k70"/>
+                            <constraint firstItem="uWs-KI-whS" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="Atk-HZ-Cvk"/>
                             <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="FJB-lW-bd3" secondAttribute="trailing" constant="20" id="CQQ-so-EDx"/>
                             <constraint firstItem="6Wi-s8-f6Y" firstAttribute="top" secondItem="xwb-FY-arb" secondAttribute="top" id="CSU-6N-je3"/>
                             <constraint firstItem="T1j-wH-L4s" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="D3T-e3-8ST"/>
                             <constraint firstItem="6Wi-s8-f6Y" firstAttribute="trailing" secondItem="XY4-Cm-eqt" secondAttribute="trailing" id="JGd-Qq-CkS"/>
                             <constraint firstItem="6Wi-s8-f6Y" firstAttribute="bottom" secondItem="xwb-FY-arb" secondAttribute="top" id="JxC-u8-HGD"/>
                             <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="T1j-wH-L4s" secondAttribute="trailing" constant="20" id="TdG-bE-BEM"/>
-                            <constraint firstItem="PEd-SM-Ie2" firstAttribute="centerX" secondItem="xwb-FY-arb" secondAttribute="centerX" id="YjA-B6-c9l"/>
                             <constraint firstItem="FJB-lW-bd3" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="con-6s-MtU"/>
+                            <constraint firstItem="uWs-KI-whS" firstAttribute="top" secondItem="NFB-fp-hyN" secondAttribute="bottom" constant="18" id="fMB-8x-F4A"/>
                             <constraint firstItem="6Wi-s8-f6Y" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" id="fsz-O0-NhY"/>
+                            <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="NFB-fp-hyN" secondAttribute="trailing" constant="20" id="gjP-nX-sux"/>
                             <constraint firstItem="FJB-lW-bd3" firstAttribute="top" secondItem="XY4-Cm-eqt" secondAttribute="top" constant="23" id="hIp-jy-E3P"/>
+                            <constraint firstItem="tLf-f4-F0p" firstAttribute="top" secondItem="uWs-KI-whS" secondAttribute="bottom" constant="8" id="iwp-pv-go7"/>
+                            <constraint firstItem="NFB-fp-hyN" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="khX-it-OGq"/>
+                            <constraint firstItem="tLf-f4-F0p" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="pX1-Tu-Xql"/>
+                            <constraint firstItem="HTn-EJ-2As" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="ru5-5i-qIG"/>
                             <constraint firstItem="T1j-wH-L4s" firstAttribute="top" secondItem="FJB-lW-bd3" secondAttribute="bottom" constant="8" id="uXD-zH-8jP"/>
-                            <constraint firstItem="PEd-SM-Ie2" firstAttribute="centerY" secondItem="xwb-FY-arb" secondAttribute="centerY" id="wDn-RT-tNu"/>
+                            <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="tLf-f4-F0p" secondAttribute="trailing" constant="20" id="wbB-WH-zVG"/>
+                            <constraint firstItem="HTn-EJ-2As" firstAttribute="top" secondItem="T1j-wH-L4s" secondAttribute="bottom" constant="18" id="wyI-BU-yzr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XY4-Cm-eqt"/>
                     </view>
@@ -160,11 +185,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextField" destination="T1j-wH-L4s" id="2sl-vI-WOu"/>
+                        <outlet property="endTimeTextField" destination="tLf-f4-F0p" id="pcu-KW-68X"/>
+                        <outlet property="startTimeTextField" destination="NFB-fp-hyN" id="VCA-vY-iII"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mZ-8m-VpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3654" y="28"/>
+            <point key="canvasLocation" x="3653.5999999999999" y="27.436281859070466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2AC-o2-RWc">

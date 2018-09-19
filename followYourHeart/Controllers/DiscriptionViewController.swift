@@ -10,14 +10,50 @@ import UIKit
 
 class DiscriptionViewController: UIViewController {
 
+    private let startDatePickerTag = 1
+    private let endDatePickerTag = 2
+    
     @IBOutlet weak var descriptionTextField: UITextField!
-    @IBAction func showTimeSetting(_ sender: Any) {
-        showTimeSettingView()
-    }
+    @IBOutlet weak var startTimeTextField: UITextField!
+    @IBOutlet weak var endTimeTextField: UITextField!
+    
+    private var startTimeDatePicker: UIDatePicker?
+    private var endTimeDatePicker: UIDatePicker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpViewTapRecoganizer()
         setUpDescriptionTextField()
+        setUpStartTimeDatePicker()
+        setUpEndTimeDatePicker()
+    }
+    
+    func setUpViewTapRecoganizer() {
+        let tapRecoganizer = UITapGestureRecognizer(target: self, action: #selector(DiscriptionViewController.viewTapped(gestureRecoganizer:)))
+        view.addGestureRecognizer(tapRecoganizer)
+    }
+    
+    @objc private func viewTapped(gestureRecoganizer: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    func setUpStartTimeDatePicker() {
+        startTimeDatePicker = UIDatePicker()
+        startTimeDatePicker?.tag = startDatePickerTag
+        startTimeDatePicker?.addTarget(self,
+                                     action: #selector(dateChanged(datePicker:)),
+                                     for: .valueChanged)
+        startTimeTextField.inputView = startTimeDatePicker
+    }
+    
+    func setUpEndTimeDatePicker() {
+        endTimeDatePicker = UIDatePicker()
+        endTimeDatePicker?.tag = endDatePickerTag
+        endTimeDatePicker?.addTarget(self,
+                                     action: #selector(dateChanged(datePicker:)),
+                                     for: .valueChanged)
+        endTimeTextField.inputView = endTimeDatePicker
     }
     
     func setUpDescriptionTextField() {
@@ -25,20 +61,20 @@ class DiscriptionViewController: UIViewController {
         descriptionTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.top
     }
     
-    func showTimeSettingView() {
-        let timeSettingPopOVerController = TimeInputController()
-        timeSettingPopOVerController.modalPresentationStyle = .overCurrentContext
-        timeSettingPopOVerController.modalTransitionStyle = .crossDissolve
-        self.present(timeSettingPopOVerController, animated: true, completion: nil)
+    @objc func dateChanged(datePicker: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy HH:mm"
+        let dateString = dateFormatter.string(from: datePicker.date)
+        if datePicker.tag == startDatePickerTag {
+            startTimeTextField.text = dateString
+        } else if datePicker.tag == endDatePickerTag {
+            endTimeTextField.text = dateString
+        }
     }
 }
 
 extension DiscriptionViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
     }
 }
