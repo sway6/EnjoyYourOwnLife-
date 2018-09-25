@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class DiscriptionViewController: UIViewController {
 
     private let startDatePickerTag = 1
@@ -16,7 +17,13 @@ class DiscriptionViewController: UIViewController {
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var startTimeTextField: UITextField!
     @IBOutlet weak var endTimeTextField: UITextField!
-    
+    @IBAction func saveAction(_ sender: Any) {
+        guard let controller = getTimeListController() else {
+            return
+        }
+//        let task: FightingTime = FightingTime(startTime: startTimeTextField.text, timeInterval: endTimeTextField.text)
+    }
+
     private var startTimeDatePicker: UIDatePicker?
     private var endTimeDatePicker: UIDatePicker?
     
@@ -71,6 +78,19 @@ class DiscriptionViewController: UIViewController {
             endTimeTextField.text = dateString
         }
     }
+    
+    func getTimeListController() -> TimeListViewController? {
+        guard let naviController = self.navigationController else {
+            return nil
+        }
+        for viewController in naviController.viewControllers {
+            if viewController is TimeListViewController {
+                return viewController as? TimeListViewController
+            }
+        }
+        return nil
+    }
+
 }
 
 extension DiscriptionViewController: UITextFieldDelegate {

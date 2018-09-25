@@ -13,6 +13,10 @@ class TimeListViewController: UIViewController {
     let TimeTableCelId = "timeCell"
     var timeList: [FightingTime] = []
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
@@ -20,6 +24,10 @@ class TimeListViewController: UIViewController {
         timeListTableView.dataSource = self
         timeListTableView.register(UINib(nibName: "TimeListCell", bundle: nil), forCellReuseIdentifier: TimeTableCelId)
         timeListTableView.tableFooterView = UIView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
     
     func setUpNavigationBar() {
@@ -38,6 +46,10 @@ class TimeListViewController: UIViewController {
         tomorrowValidTime.hour = timePoint.hour
         tomorrowValidTime.minute = timePoint.min
         return calendar.date(from: tomorrowValidTime)
+    }
+    
+    func addTask(task: FightingTime) {
+        self.timeList.append(task)
     }
 
     @IBAction func addTimeSheet(_ sender: Any) {

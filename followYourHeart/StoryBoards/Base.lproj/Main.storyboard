@@ -157,6 +157,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uWs-KI-whS" secondAttribute="trailing" constant="20" symbolic="YES" id="3z1-kD-6h7"/>
                             <constraint firstItem="NFB-fp-hyN" firstAttribute="top" secondItem="HTn-EJ-2As" secondAttribute="bottom" constant="8" id="AQk-SU-k70"/>
                             <constraint firstItem="uWs-KI-whS" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="Atk-HZ-Cvk"/>
                             <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="FJB-lW-bd3" secondAttribute="trailing" constant="20" id="CQQ-so-EDx"/>
@@ -164,6 +165,7 @@
                             <constraint firstItem="T1j-wH-L4s" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="D3T-e3-8ST"/>
                             <constraint firstItem="6Wi-s8-f6Y" firstAttribute="trailing" secondItem="XY4-Cm-eqt" secondAttribute="trailing" id="JGd-Qq-CkS"/>
                             <constraint firstItem="6Wi-s8-f6Y" firstAttribute="bottom" secondItem="xwb-FY-arb" secondAttribute="top" id="JxC-u8-HGD"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HTn-EJ-2As" secondAttribute="trailing" constant="20" symbolic="YES" id="LeD-71-UDo"/>
                             <constraint firstItem="XY4-Cm-eqt" firstAttribute="trailing" secondItem="T1j-wH-L4s" secondAttribute="trailing" constant="20" id="TdG-bE-BEM"/>
                             <constraint firstItem="FJB-lW-bd3" firstAttribute="leading" secondItem="XY4-Cm-eqt" secondAttribute="leading" constant="20" id="con-6s-MtU"/>
                             <constraint firstItem="uWs-KI-whS" firstAttribute="top" secondItem="NFB-fp-hyN" secondAttribute="bottom" constant="18" id="fMB-8x-F4A"/>
@@ -181,7 +183,11 @@
                         <viewLayoutGuide key="safeArea" id="XY4-Cm-eqt"/>
                     </view>
                     <navigationItem key="navigationItem" id="0NJ-Di-dTs">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="10L-Rj-2tN"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="10L-Rj-2tN">
+                            <connections>
+                                <action selector="saveAction:" destination="APQ-tu-wXs" id="nv1-5t-wau"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextField" destination="T1j-wH-L4s" id="2sl-vI-WOu"/>

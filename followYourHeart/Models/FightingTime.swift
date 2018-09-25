@@ -16,6 +16,8 @@ struct FightingTime {
     
     // time to push a local notification as a end time
     let timeInterval: FightingTimeInterval
+    
+    let description: String
 }
 
 struct FightingTimePoint {
