@@ -15,6 +15,7 @@ class TimeListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        timeListTableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -36,16 +37,6 @@ class TimeListViewController: UIViewController {
     
     func setUpTimeList(timeList: [FightingTime]) {
         self.timeList = timeList
-    }
-    
-    func getTomorrowTime(timePoint: FightingTimePoint) -> Date? {
-        guard let tomorrowDate = Date().tomorrow else { return nil }
-        let calendar = Calendar.current
-        let components: Set<Calendar.Component> = [.era, .year, .month, .day]
-        var tomorrowValidTime = calendar.dateComponents(components, from: tomorrowDate)
-        tomorrowValidTime.hour = timePoint.hour
-        tomorrowValidTime.minute = timePoint.min
-        return calendar.date(from: tomorrowValidTime)
     }
     
     func addTask(task: FightingTime) {
@@ -73,13 +64,8 @@ extension TimeListViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         let fightingTime = timeList[indexPath.row]
-        if let tomorrowTimePoint = getTomorrowTime(timePoint: fightingTime.startTime) {
-            let hour = Calendar.current.component(.hour, from: tomorrowTimePoint)
-            cell.timeLabel.text = String(hour) + " AM"
-            cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-            return cell
-        } else {
-            return UITableViewCell()
-        }
+        cell.timeLabel.text = fightingTime.startTime
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+        return cell
     }
 }

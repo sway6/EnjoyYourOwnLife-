@@ -9,23 +9,17 @@
 import Foundation
 
 struct FightingTime {
-    // time to:
-    //    1. show on messageList
-    //    2. push a local notification as a start time
-    let startTime: FightingTimePoint
+    var startTime: String
+    var endTime: String
+    var startDate: Date
+    var endDate: Date
+    var description: String
     
-    // time to push a local notification as a end time
-    let timeInterval: FightingTimeInterval
-    
-    let description: String
-}
-
-struct FightingTimePoint {
-    let hour: Int
-    let min: Int
-}
-
-struct FightingTimeInterval {
-    let hour: Int
-    let min: Int
+    init(startTime: String, endTime: String, startDate: Date, endDate: Date, description: String) {
+        self.startTime = startTime
+        self.endTime = endTime
+        self.startDate = startDate
+        self.endDate = endDate
+        self.description = description
+    }
 }

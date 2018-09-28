@@ -13,6 +13,9 @@ class DiscriptionViewController: UIViewController {
 
     private let startDatePickerTag = 1
     private let endDatePickerTag = 2
+    var startDate: Date?
+    var endDate: Date?
+    var taskDescription: String?
     
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var startTimeTextField: UITextField!
@@ -21,7 +24,13 @@ class DiscriptionViewController: UIViewController {
         guard let controller = getTimeListController() else {
             return
         }
-//        let task: FightingTime = FightingTime(startTime: startTimeTextField.text, timeInterval: endTimeTextField.text)
+        let task = FightingTime(startTime: startTimeTextField.text ?? "",
+                                endTime: endTimeTextField.text ?? "",
+                                startDate: startDate ?? Date(),
+                                endDate: endDate ?? Date(),
+                                description: taskDescription ?? "")
+        controller.timeList.append(task)
+        self.navigationController?.popToViewController(controller, animated: true)
     }
 
     private var startTimeDatePicker: UIDatePicker?
@@ -74,8 +83,10 @@ class DiscriptionViewController: UIViewController {
         let dateString = dateFormatter.string(from: datePicker.date)
         if datePicker.tag == startDatePickerTag {
             startTimeTextField.text = dateString
+            startDate = datePicker.date
         } else if datePicker.tag == endDatePickerTag {
             endTimeTextField.text = dateString
+            endDate = datePicker.date
         }
     }
     
