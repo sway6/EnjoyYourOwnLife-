@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 
 class DiscriptionViewController: UIViewController {
 
@@ -24,12 +24,7 @@ class DiscriptionViewController: UIViewController {
         guard let controller = getTimeListController() else {
             return
         }
-        let task = FightingTime(startTime: startTimeTextField.text ?? "",
-                                endTime: endTimeTextField.text ?? "",
-                                startDate: startDate ?? Date(),
-                                endDate: endDate ?? Date(),
-                                description: taskDescription ?? "")
-        controller.timeList.append(task)
+        saveTaskToDB()
         self.navigationController?.popToViewController(controller, animated: true)
     }
 
@@ -46,7 +41,8 @@ class DiscriptionViewController: UIViewController {
     }
     
     func setUpViewTapRecoganizer() {
-        let tapRecoganizer = UITapGestureRecognizer(target: self, action: #selector(DiscriptionViewController.viewTapped(gestureRecoganizer:)))
+        let tapRecoganizer = UITapGestureRecognizer(target: self,
+                                                    action: #selector(DiscriptionViewController.viewTapped(gestureRecoganizer:)))
         view.addGestureRecognizer(tapRecoganizer)
     }
     
@@ -100,6 +96,31 @@ class DiscriptionViewController: UIViewController {
             }
         }
         return nil
+    }
+    
+    func saveTaskToDB() {
+        guard let entity = NSEntityDescription.entity(forEntityName: Config.entityName, in: DataBase.context) else {
+            return
+        }
+        let entityManager = NSManagedObject(entity: entity,
+                                            insertInto: DataBase.context)
+        let task = FightingTime(startTime: startTimeTextField.text ?? "",
+                                endTime: endTimeTextField.text ?? "",
+                                startDate: startDate ?? Date(),
+                                endDate: endDate ?? Date(),
+                                description: taskDescription ?? "")
+        
+        entityManager.setValue(task.startTime, forKey: "startTime")
+        entityManager.setValue(task.endTime, forKey: "endTime")
+        entityManager.setValue(task.startDate, forKey: "startDate")
+        entityManager.setValue(task.endDate, forKey: "endDate")
+        entityManager.setValue(task.taskDescription, forKey: "taskDescription")
+        
+        do {
+           try DataBase.context.save()
+        } catch {
+            print("Failed Saving Task")
+        }
     }
 
 }

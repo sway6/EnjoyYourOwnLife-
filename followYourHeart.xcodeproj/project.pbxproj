@@ -11,6 +11,9 @@
 		DC1F5ADC214EE1B5005B9B32 /* Date+TomorrowDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F5ADB214EE1B5005B9B32 /* Date+TomorrowDate.swift */; };
 		DC1F5AE3214F351C005B9B32 /* TimeInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F5AE1214F351C005B9B32 /* TimeInputController.swift */; };
 		DC1F5AE4214F351C005B9B32 /* TimeInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1F5AE2214F351C005B9B32 /* TimeInputController.xib */; };
+		DC94E6CB2162F613004FCC8B /* followYourHeart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC94E6C82162F318004FCC8B /* followYourHeart.xcdatamodeld */; };
+		DC94E6CD2162F7E1004FCC8B /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC94E6CC2162F7E1004FCC8B /* DataBase.swift */; };
+		DC94E6CF2162FDE9004FCC8B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC94E6CE2162FDE9004FCC8B /* Config.swift */; };
 		DCC12195214448C6003D59AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC12194214448C6003D59AB /* AppDelegate.swift */; };
 		DCC12197214448C6003D59AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC12196214448C6003D59AB /* ViewController.swift */; };
 		DCC1219A214448C6003D59AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC12198214448C6003D59AB /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 		DC1F5ADB214EE1B5005B9B32 /* Date+TomorrowDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TomorrowDate.swift"; sourceTree = "<group>"; };
 		DC1F5AE1214F351C005B9B32 /* TimeInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInputController.swift; sourceTree = "<group>"; };
 		DC1F5AE2214F351C005B9B32 /* TimeInputController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeInputController.xib; sourceTree = "<group>"; };
+		DC94E6C92162F318004FCC8B /* followYourHeart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = followYourHeart.xcdatamodel; sourceTree = "<group>"; };
+		DC94E6CC2162F7E1004FCC8B /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		DC94E6CE2162FDE9004FCC8B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		DCC12191214448C6003D59AB /* followYourHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = followYourHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC12194214448C6003D59AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCC12196214448C6003D59AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				DC1F5AD7214B653B005B9B32 /* FightingTime.swift */,
+				DC94E6CC2162F7E1004FCC8B /* DataBase.swift */,
+				DC94E6CE2162FDE9004FCC8B /* Config.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				DCC12194214448C6003D59AB /* AppDelegate.swift */,
+				DC94E6C82162F318004FCC8B /* followYourHeart.xcdatamodeld */,
 			);
 			path = DefaultAppSettings;
 			sourceTree = "<group>";
@@ -338,9 +347,12 @@
 			files = (
 				DCC121C321458A25003D59AB /* TimeListViewController.swift in Sources */,
 				DCC12197214448C6003D59AB /* ViewController.swift in Sources */,
+				DC94E6CB2162F613004FCC8B /* followYourHeart.xcdatamodeld in Sources */,
 				DC1F5ADC214EE1B5005B9B32 /* Date+TomorrowDate.swift in Sources */,
 				DCC121CD2145A08F003D59AB /* TimeListCell.swift in Sources */,
+				DC94E6CF2162FDE9004FCC8B /* Config.swift in Sources */,
 				DCC121C621459792003D59AB /* UIColor+HexString.swift in Sources */,
+				DC94E6CD2162F7E1004FCC8B /* DataBase.swift in Sources */,
 				DC1F5AE3214F351C005B9B32 /* TimeInputController.swift in Sources */,
 				DCC12195214448C6003D59AB /* AppDelegate.swift in Sources */,
 				DC1F5AD8214B653B005B9B32 /* FightingTime.swift in Sources */,
@@ -638,6 +650,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC94E6C82162F318004FCC8B /* followYourHeart.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC94E6C92162F318004FCC8B /* followYourHeart.xcdatamodel */,
+			);
+			currentVersion = DC94E6C92162F318004FCC8B /* followYourHeart.xcdatamodel */;
+			path = followYourHeart.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DCC12189214448C6003D59AB /* Project object */;
 }

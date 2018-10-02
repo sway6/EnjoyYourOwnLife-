@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import CoreData
 
 class TimeListViewController: UIViewController {
     @IBOutlet weak var timeListTableView: UITableView!
+    
+    @IBAction func addTimeSheet(_ sender: Any) {
+        performSegue(withIdentifier: "ShowTimeSheetDiscription",
+                     sender: self)
+    }
+    
     let TimeTableCelId = "timeCell"
     var timeList: [FightingTime] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        timeList = [FightingTime]()
+        getTaskFromDB()
         timeListTableView.reloadData()
     }
     
@@ -31,6 +40,39 @@ class TimeListViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
+    func getTaskFromDB() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: Config.entityName)
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result =  try DataBase.context.fetch(request)
+            guard let tasks = result as? [NSManagedObject] else {
+                return
+            }
+            for data in tasks {
+                insertTaskIntoDataSource(task: data)
+            }
+        } catch {
+            print("Get Task From DataBase Failed")
+        }
+    }
+    
+    func insertTaskIntoDataSource(task: NSManagedObject) {
+        let startTime = task.value(forKey: "startTime") as? String ?? ""
+        let endTime = task.value(forKey: "endTime") as? String ?? ""
+        let startDate = task.value(forKey: "startDate") as? Date ?? Date()
+        let endDate = task.value(forKey: "endDate") as? Date ?? Date()
+        let taskDescription = task.value(forKey: "taskDescription") as? String ?? ""
+        
+        let task = FightingTime(startTime: startTime,
+                                endTime: endTime,
+                                startDate: startDate,
+                                endDate: endDate,
+                                description: taskDescription)
+        
+        timeList.append(task)
+    }
+    
     func setUpNavigationBar() {
         self.navigationItem.title = "Time List"
     }
@@ -43,9 +85,6 @@ class TimeListViewController: UIViewController {
         self.timeList.append(task)
     }
 
-    @IBAction func addTimeSheet(_ sender: Any) {
-        performSegue(withIdentifier: "ShowTimeSheetDiscription", sender: self)
-    }
 }
 
 extension TimeListViewController: UITableViewDelegate, UITableViewDataSource {

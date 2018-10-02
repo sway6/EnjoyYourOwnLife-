@@ -8,18 +8,18 @@
 
 import Foundation
 
-struct FightingTime {
+class FightingTime {
     var startTime: String
     var endTime: String
     var startDate: Date
     var endDate: Date
-    var description: String
+    var taskDescription: String
     
     init(startTime: String, endTime: String, startDate: Date, endDate: Date, description: String) {
         self.startTime = startTime
         self.endTime = endTime
         self.startDate = startDate
         self.endDate = endDate
-        self.description = description
+        self.taskDescription = description
     }
 }
