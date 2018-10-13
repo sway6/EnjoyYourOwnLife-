@@ -105,6 +105,24 @@ extension TimeListViewController: UITableViewDelegate, UITableViewDataSource {
         let fightingTime = timeList[indexPath.row]
         cell.timeLabel.text = fightingTime.startTime
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+        let cellBackGroundView = UIView()
+        cellBackGroundView.backgroundColor = UIColor.clear
+        cell.selectedBackgroundView = cellBackGroundView
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row >= timeList.count { return }
+        guard let naviController = self.navigationController else { return }
+        let detailStoryBoard = UIStoryboard(name: "TaskDetailTableView", bundle: nil)
+        guard let taskDetailController =
+            detailStoryBoard
+                .instantiateViewController(withIdentifier: "DescriptionTableViewController") as? DescriptionTableViewController else {
+                return
+        }
+        let task = timeList[indexPath.row]
+        taskDetailController.viewModel = DescriptionTableViewModel(task: task)
+        naviController.pushViewController(taskDetailController, animated: true)
+    }
+    
 }

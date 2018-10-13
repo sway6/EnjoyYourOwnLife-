@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		DC1F5AD8214B653B005B9B32 /* FightingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F5AD7214B653B005B9B32 /* FightingTime.swift */; };
 		DC1F5ADC214EE1B5005B9B32 /* Date+TomorrowDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F5ADB214EE1B5005B9B32 /* Date+TomorrowDate.swift */; };
-		DC1F5AE3214F351C005B9B32 /* TimeInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F5AE1214F351C005B9B32 /* TimeInputController.swift */; };
-		DC1F5AE4214F351C005B9B32 /* TimeInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1F5AE2214F351C005B9B32 /* TimeInputController.xib */; };
 		DC94E6CB2162F613004FCC8B /* followYourHeart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC94E6C82162F318004FCC8B /* followYourHeart.xcdatamodeld */; };
 		DC94E6CD2162F7E1004FCC8B /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC94E6CC2162F7E1004FCC8B /* DataBase.swift */; };
 		DC94E6CF2162FDE9004FCC8B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC94E6CE2162FDE9004FCC8B /* Config.swift */; };
+		DC94E6D921659AA8004FCC8B /* TaskDetailTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC94E6D821659AA8004FCC8B /* TaskDetailTableView.storyboard */; };
+		DC94E6DB21659CD8004FCC8B /* DescriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC94E6DA21659CD8004FCC8B /* DescriptionTableViewController.swift */; };
+		DC94E6DE21726CCF004FCC8B /* DescriptionTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC94E6DD21726CCF004FCC8B /* DescriptionTableViewModel.swift */; };
 		DCC12195214448C6003D59AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC12194214448C6003D59AB /* AppDelegate.swift */; };
 		DCC12197214448C6003D59AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC12196214448C6003D59AB /* ViewController.swift */; };
 		DCC1219A214448C6003D59AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC12198214448C6003D59AB /* Main.storyboard */; };
@@ -48,11 +49,12 @@
 /* Begin PBXFileReference section */
 		DC1F5AD7214B653B005B9B32 /* FightingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingTime.swift; sourceTree = "<group>"; };
 		DC1F5ADB214EE1B5005B9B32 /* Date+TomorrowDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TomorrowDate.swift"; sourceTree = "<group>"; };
-		DC1F5AE1214F351C005B9B32 /* TimeInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInputController.swift; sourceTree = "<group>"; };
-		DC1F5AE2214F351C005B9B32 /* TimeInputController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeInputController.xib; sourceTree = "<group>"; };
 		DC94E6C92162F318004FCC8B /* followYourHeart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = followYourHeart.xcdatamodel; sourceTree = "<group>"; };
 		DC94E6CC2162F7E1004FCC8B /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		DC94E6CE2162FDE9004FCC8B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		DC94E6D821659AA8004FCC8B /* TaskDetailTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskDetailTableView.storyboard; sourceTree = "<group>"; };
+		DC94E6DA21659CD8004FCC8B /* DescriptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewController.swift; sourceTree = "<group>"; };
+		DC94E6DD21726CCF004FCC8B /* DescriptionTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewModel.swift; sourceTree = "<group>"; };
 		DCC12191214448C6003D59AB /* followYourHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = followYourHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC12194214448C6003D59AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCC12196214448C6003D59AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		DC94E6DC21726CA6004FCC8B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DC94E6DD21726CCF004FCC8B /* DescriptionTableViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		DCC12188214448C6003D59AB = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 				DC1F5AD6214B642C005B9B32 /* Models */,
 				DCC121CA2145A01F003D59AB /* VIews */,
 				DCC121C72145979D003D59AB /* Controllers */,
+				DC94E6DC21726CA6004FCC8B /* ViewModels */,
 				DCC121C42145974C003D59AB /* Extensions */,
 				DCC121C8214597BA003D59AB /* DefaultAppSettings */,
 				DCC1219B214448C6003D59AB /* Assets.xcassets */,
@@ -177,8 +188,7 @@
 				DCC12196214448C6003D59AB /* ViewController.swift */,
 				DCC121C221458A25003D59AB /* TimeListViewController.swift */,
 				DCC121D62145D3F0003D59AB /* DiscriptionViewController.swift */,
-				DC1F5AE1214F351C005B9B32 /* TimeInputController.swift */,
-				DC1F5AE2214F351C005B9B32 /* TimeInputController.xib */,
+				DC94E6DA21659CD8004FCC8B /* DescriptionTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				DCC12198214448C6003D59AB /* Main.storyboard */,
+				DC94E6D821659AA8004FCC8B /* TaskDetailTableView.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -316,7 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC1F5AE4214F351C005B9B32 /* TimeInputController.xib in Resources */,
+				DC94E6D921659AA8004FCC8B /* TaskDetailTableView.storyboard in Resources */,
 				DCC121CE2145A08F003D59AB /* TimeListCell.xib in Resources */,
 				DCC1219F214448C6003D59AB /* LaunchScreen.storyboard in Resources */,
 				DCC1219C214448C6003D59AB /* Assets.xcassets in Resources */,
@@ -351,11 +362,12 @@
 				DC1F5ADC214EE1B5005B9B32 /* Date+TomorrowDate.swift in Sources */,
 				DCC121CD2145A08F003D59AB /* TimeListCell.swift in Sources */,
 				DC94E6CF2162FDE9004FCC8B /* Config.swift in Sources */,
+				DC94E6DB21659CD8004FCC8B /* DescriptionTableViewController.swift in Sources */,
 				DCC121C621459792003D59AB /* UIColor+HexString.swift in Sources */,
 				DC94E6CD2162F7E1004FCC8B /* DataBase.swift in Sources */,
-				DC1F5AE3214F351C005B9B32 /* TimeInputController.swift in Sources */,
 				DCC12195214448C6003D59AB /* AppDelegate.swift in Sources */,
 				DC1F5AD8214B653B005B9B32 /* FightingTime.swift in Sources */,
+				DC94E6DE21726CCF004FCC8B /* DescriptionTableViewModel.swift in Sources */,
 				DCC121D72145D3F0003D59AB /* DiscriptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
